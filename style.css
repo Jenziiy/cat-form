@@ -37,6 +37,12 @@ word-wrap: break-word;
 }
 
 .section-content{
+  display: flex;
+  flex-direction: column;
   flex-grow: 1.8;
-  
+}
+
+.section-content > * {
+  flex-grow: 1;
+  border: hotpink solid;
 }
