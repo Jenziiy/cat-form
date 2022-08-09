@@ -161,7 +161,6 @@ input:focus {
   box-shadow:rgba(230, 8, 8, 0.825) 3px 7px 20px;
 }
 
-
 @media only screen and (max-width: 800px) {
   form {
     grid-template-columns: auto;
@@ -194,5 +193,9 @@ input:focus {
     margin-top: 15%;
     max-width: 70px;
     font-size: 12px;
+  }
+  input + span::before {
+  top: -17px;
+  right: -99px;
   }
 }
