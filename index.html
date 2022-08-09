@@ -17,9 +17,44 @@
       <div></div>
     </section>
     <section class="section-content">
-      <header></header>
-      <main></main>
-      <footer></footer>
+      <header>
+        <h1>Please sign up or log in <br> & follow your dreams.</h1>
+      </header>
+      <main>
+        <form action="index.html" method="get">
+          <div>
+            <label for="user_name_first">First name *: </label>
+            <input type="text" name="user_name_first" id="first_name" placeholder="Jenzii" required>
+          <span></span>
+          </div>
+          <div>
+            <label for="user_name_last">Last name: </label>
+            <input type="text" name="user_name_last" id="last_name" required>
+            <span></span>
+          </div>
+          <div>
+            <label for="email">E-mail *: </label>
+            <input type="email" name="user_email" id="email" placeholder="jenzii@jenzii.com" required>
+            <span></span>
+          </div>
+          <div>
+            <label for="phone_number">Phone number: </label>
+            <input type="tel" name="user_phone_number" id="phone_number" minlength="9" placeholder="+31634567789" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
+          </div>
+          <div>
+            <label for="password">Password: </label>
+            <input type="password" name="user_password" id="password" placeholder="************">
+          </div>
+          <div>
+            <label for="password_confirm">Confirm password</label>
+            <input type="password" name="user_password_confirm" id="password_confirm" placeholder="************">
+          </div>
+        </form>
+      </main>
+      <footer>
+        <button>Log in</button>
+        <h2>Click here to sign up</h2>
+      </footer>
     </section>
   </div>
   

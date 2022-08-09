@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway:wght@400&family=Teko:wght@700&display=swap');
+
 
 html, body {
   height: 100%; margin: 0%; padding: 0%;
   background-color:rgb(142, 197, 219);
+  font-family: 'Raleway';
+  color: rgb(82, 75, 60);
 }
 
 .page {
@@ -16,6 +20,7 @@ html, body {
 
 .section-cover{
   display: flex;
+  min-width: 35%;
   flex-direction: column;
   flex: 1;
   background-image: url(./carpet-cat.jpg);
@@ -43,10 +48,65 @@ word-wrap: break-word;
 }
 
 header, footer {
-  flex-grow: 2;
+  flex-grow: 2.5;
 }
 
 main {
-  flex-grow: 4;
+  flex-grow: 3;
   box-shadow: rgb(154, 149, 151, 0.9) 10px 10px 10px -12px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3vw;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1em;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  max-width: 15vw;
+  padding-left:5vw;
+}
+
+label{
+  width: 100px;
+}
+input {
+  width: 15vw;
+  border-radius: 6px;
+  border-style:unset;
+}
+
+@media only screen and (max-width: 800px) {
+  form {
+    grid-template-columns: auto;
+    row-gap: 0.5em;
+    font-size: 10px;
+  }
+  form div input {
+    width: 10em;
+  }
+
+  .section-content{
+    max-height: 100vh;
+  }
+
+  main{
+    flex: 2 0 auto;
+  }
+
+  header, footer {
+    flex: 1 4 auto;
+  }
 }
