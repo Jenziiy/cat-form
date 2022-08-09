@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title> Register or log on</title>
   <link rel="icon" href="cat-cursor.png" type="image/x-icon">
+  <script src="javascript.js" defer></script>
 </head>
 <body>
   <div class="page">
@@ -21,7 +22,7 @@
         <h1>Please sign up or log in <br> & follow your dreams.</h1>
       </header>
       <main>
-        <form action="index.html" method="get">
+        <form action="index.html" method="get" id="registration_form">
           <div>
             <label for="user_name_first">First name *: </label>
             <input type="text" name="user_name_first" id="first_name" placeholder="Jenzii" required>
@@ -52,8 +53,8 @@
         </form>
       </main>
       <footer>
-        <button>Log in</button>
-        <h2>Click here to sign up</h2>
+        <button type="submit" for="registration_form">Log in</button>
+        <h2>Click <a href="./index.html">>>here</a> to sign up</h2>
       </footer>
     </section>
   </div>

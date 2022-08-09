@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Teko:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway:wght@400&family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway:wght@700&family=Teko:wght@700&display=swap');
 
 
 html, body {
   height: 100%; margin: 0%; padding: 0%;
   background-color:rgb(142, 197, 219);
   font-family: 'Raleway';
+  font-size: 16px;
   color: rgb(82, 75, 60);
 }
 
@@ -51,6 +53,36 @@ header, footer {
   flex-grow: 2.5;
 }
 
+footer{
+  padding: 2.5% 14% 0% 8%;
+  font-size: 1 em;
+  word-wrap:break-word;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-top: 3.5%;
+  max-width: 140px;
+}
+
+a {
+  text-decoration-line:none;
+  color:goldenrod;
+}
+
+button {
+  margin-top: 20px;
+  height: 40px;
+  width: 150px;
+  box-shadow:rgb(142, 197, 219) 0px 5px 22px 5px;
+  border-radius: 6px;
+  border-style: unset;
+  border: solid rgb(224, 195, 33, 0.5) thick;
+  color: rgb(218, 82, 88);
+  font-weight: 900;
+}
+
 main {
   flex-grow: 3;
   box-shadow: rgb(154, 149, 151, 0.9) 10px 10px 10px -12px;
@@ -80,13 +112,55 @@ form div {
 }
 
 label{
-  width: 100px;
+  width: 150px;
+  margin-bottom: 5%;
+  font-size: 0.9rem;
 }
 input {
   width: 15vw;
   border-radius: 6px;
   border-style:unset;
+  font-size: 0.9 rem;
 }
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: -24px;
+}
+
+input:invalid {
+  border: 0.1px solid red;
+}
+
+input:invalid + span::before {
+  content: '✖';
+  color: red;
+}
+
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
+input {
+  border: grey solid;
+  border-radius: 6px;
+  border-width: thin;
+  box-shadow:rgb(219, 192, 206) 0px 3px 3px;
+}
+
+input:focus {
+  box-shadow:rgba(250, 204, 225, 0.6) 0px 7px 30px;
+  border: solid rgb(219, 192, 206);
+}
+
+.invalid {
+  box-shadow:rgba(230, 8, 8, 0.825) 3px 7px 20px;
+}
+
 
 @media only screen and (max-width: 800px) {
   form {
@@ -108,5 +182,17 @@ input {
 
   header, footer {
     flex: 1 4 auto;
+  }
+  button {
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    margin-right: 5%;
+  }
+
+  h2 {
+    margin-top: 15%;
+    max-width: 70px;
+    font-size: 12px;
   }
 }
