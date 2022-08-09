@@ -42,7 +42,11 @@ word-wrap: break-word;
   flex-grow: 1.8;
 }
 
-.section-content > * {
-  flex-grow: 1;
-  border: hotpink solid;
+header, footer {
+  flex-grow: 2;
+}
+
+main {
+  flex-grow: 4;
+  box-shadow: rgb(154, 149, 151, 0.9) 10px 10px 10px -12px;
 }
